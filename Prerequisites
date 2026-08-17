@@ -12,3 +12,44 @@ The SECURITY.md template is a comprehensive document that outlines security prac
     For more detailed information, you can refer to the specific templates available on GitHub.
 
 Sources : https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/add-security-policy
+
+Further more :
+
+Answer from Github CoPilot : what is your take on mercurial
+
+Short answer: Mercurial (hg) is a well-designed, capable distributed VCS with a cleaner mental model and nicer defaults than Git in many places. It’s less popular today, but still a solid choice for teams that value simplicity, consistent CLI/UX, and some built-in features Git only gained later or via extensions.
+
+Why I say that — quick pros and cons
+
+    Pros
+        Simpler, more consistent command set and UX (fewer surprising defaults).
+        Cleaner history/branch model (bookmarks/branches/heads are easier to reason about for many users).
+        Good Windows support historically (fewer platform quirks than older Git on Windows).
+        Extensible via extensions; useful built-ins like phases and a coherent approach to history evolution.
+        Often easier to teach to newcomers because commands map clearly to common tasks.
+
+    Cons
+        Much smaller ecosystem and fewer hosting/integration choices than Git (GitHub, GitLab, CI/CD ecosystem, many tools assume Git).
+        Less community momentum and fewer third‑party tools/plugins; hiring/knowledge pool is smaller.
+        Some scaling/features (very large monorepos, certain advanced workflows) have received more investment in the Git world.
+        Fewer modern hosting-first conveniences (pull request UX, code review integrations) historically tied to Git platforms.
+
+When Mercurial makes sense
+
+    You already have hg experience on the team and no pressing need to migrate.
+    You prefer a simpler, more predictable command set and workflow.
+    Your tooling and integrations are hg-friendly (internal tools, build systems).
+    You need some of Mercurial’s built-in history-management features and prefer them to Git’s extension-based approach.
+
+When to pick Git instead
+
+    You rely on broad third‑party tooling, SaaS hosting, or an ecosystem that assumes Git.
+    You need the largest pool of developers familiar with the VCS.
+    You want features or performance optimizations that the Git ecosystem has driven (though Mercurial has competing solutions).
+
+Practical advice
+
+    For new projects, Git is the pragmatic default due to ecosystem and hiring. For established hg codebases, there’s often little practical reason to rush a migration unless tooling/hosting forces it.
+    If you’re evaluating migration, consider cost/benefit: training, CI updates, hooks, large-file handling, and preserving history and metadata.
+
+If you want, tell me your context (new project vs existing repo, team size, CI/hosting constraints) and I’ll recommend a concrete choice and, if needed, outline migration or interop options.
