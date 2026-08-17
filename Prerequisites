@@ -1,0 +1,14 @@
+The SECURITY.md template is a comprehensive document that outlines security practices and guidelines for software development. Here are some key points:
+
+    Purpose: It serves as the authoritative source for all security practices and guidelines, implementing a security-first development philosophy.
+    1
+    Content: The template includes sections on vulnerability disclosure, data classification, secrets management, access control, incident response, and more.
+    1
+    Implementation: It is designed to be a single source of truth for security practices, linking to other meta-files for consistency.
+    1
+    Versioning: The template is versioned in Git, ensuring changes are tracked and approved via PR.
+    1
+
+    For more detailed information, you can refer to the specific templates available on GitHub.
+
+Sources : https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/configure-vulnerability-reporting/add-security-policy
